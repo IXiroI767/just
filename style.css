@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.number {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    color: #ffffff;
+    font-weight: normal;
+    transform: translate(var(--sx), var(--sy));
+    transition: transform 3.5s cubic-bezier(0.19, 1, 0.22, 1);
+    will-change: transform;
+    font-size: var(--fs);
+}
+
+.number.assembled {
+    transform: translate(var(--tx), var(--ty));
+}
